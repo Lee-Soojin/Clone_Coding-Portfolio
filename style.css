@@ -23,11 +23,35 @@
   --font-micro: 0.8rem;
 
   /* Font weight */
-
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
   /* Size */
 }
 
 /* Universal tags */
 * {
   box-sizing: border-box;
+}
+/* Typography */
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 0.5rem 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0.25rem 0;
 }
