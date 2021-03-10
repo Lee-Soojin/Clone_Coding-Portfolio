@@ -13,6 +13,7 @@
   --color-green: #e2ffd2;
   --color-pink: #ffc4b6;
   --color-orange: #fcbd47;
+  --color-hotpink: #e574d8;
   --color-black: #212121;
   --color-bluegrey: #37474f;
   --color-white: whitesmoke;
@@ -389,4 +390,46 @@ p {
   left: 50%;
   margin-left: -12px;
   margin-top: 0.5rem;
+}
+
+/* Testimonial */
+#testimonials {
+  background-color: var(--color-dark-white);
+}
+
+.testimonials {
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-gray);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-hotpink);
 }
