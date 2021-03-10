@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-medium);
+  font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 0.5rem 0;
@@ -52,6 +52,13 @@ h2 {
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0.5rem 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
   color: var(--color-black);
   margin: 0.25rem 0;
 }
