@@ -17,6 +17,7 @@
   --color-bluegrey: #37474f;
   --color-white: whitesmoke;
   --color-light-white: rgb(255, 255, 255);
+  --color-dark-white: #e2e2e2;
   --color-dark-blue: #5483cb;
   --color-dark-gray: #424242;
   --color-light-gray: #a4a4a4;
@@ -291,4 +292,101 @@ p {
 .tools,
 .etc {
   padding: 1.25rem;
+}
+
+/* Work */
+
+.work__categories {
+  margin: 2.5rem;
+}
+
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 0.5rem 3rem;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  line-height: 1.5rem;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+}
+
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.projects__description {
+  position: absolute;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in;
+}
+
+.project:hover .projects__description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.projects__description h3 {
+  color: var(--color-light-white);
+}
+
+.projects__description h3:after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-dark-white);
+  display: block;
+  position: relative;
+  left: 50%;
+  margin-left: -12px;
+  margin-top: 0.5rem;
 }
