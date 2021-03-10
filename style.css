@@ -2,3 +2,32 @@
   width: 15px;
   height: 15px;
 }
+
+/* Global */
+:root {
+  /* Color */
+
+  --color-beige: rgb(224, 224, 197);
+  --color-blue: #88b2ff;
+  --color-purple: #ddc0ff;
+  --color-green: #e2ffd2;
+  --color-pink: #ffc4b6;
+  --color-black: #212121;
+  --color-bluegrey: #37474f;
+
+  /* Font Size */
+  --font-large: 3rem;
+  --font-medium: 1.75rem;
+  --font-regular: 1.1rem;
+  --font-small: 1rem;
+  --font-micro: 0.8rem;
+
+  /* Font weight */
+
+  /* Size */
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
