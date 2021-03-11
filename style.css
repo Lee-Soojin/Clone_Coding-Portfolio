@@ -11,7 +11,8 @@
   --color-blue: #88b2ff;
   --color-purple: #ddc0ff;
   --color-green: #e2ffd2;
-  --color-pink: #ffc4b6;
+  --color-pink: #ffa3c0;
+  --color-light-pink: #ffc4b6;
   --color-orange: #fcbd47;
   --color-hotpink: #e574d8;
   --color-black: #212121;
@@ -84,7 +85,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 0.5rem 0;
@@ -205,7 +206,7 @@ p {
 }
 
 .major__icon i:hover {
-  color: var(--color-pink);
+  color: var(--color-light-pink);
   transform: rotate(-30deg) scale(1.1);
 }
 
@@ -310,7 +311,7 @@ p {
 
 .category__btn.active,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-light-pink);
   color: var(--color-white);
 }
 
@@ -398,7 +399,10 @@ p {
 }
 
 .testimonials {
+  display: flex;
   margin: 40px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .testimonial {
@@ -432,4 +436,33 @@ p {
 
 .testimonial__speech-bubble a {
   color: var(--color-hotpink);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-pink);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-light-white);
+}
+
+.contact__title {
+  margin: 2rem 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links i {
+  transition: all 300ms ease-in;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow);
 }
