@@ -33,16 +33,15 @@ BtnContact.addEventListener("click", (event) => {
 
 // When scroll down Home section need to be transparent
 
-const home = document.querySelector("#home"),
+const home_container = document.querySelector(".home__container"),
   home_height = home.getBoundingClientRect().height;
 
 document.addEventListener("scroll", () => {
-  if (window.scrollY >= home_height / 2) {
-    home.style.opacity = 0.5;
-  } else if (window.scrollY >= home_height) {
-    home.style.opacity = 0.3;
+  const val_opacity = 1 - window.scrollY / home_height;
+  if (val_opacity <= 0) {
+    return;
   } else {
-    home.style.opacity = 1;
+    home_container.style.opacity = val_opacity;
   }
 });
 
