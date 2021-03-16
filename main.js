@@ -48,7 +48,7 @@ document.addEventListener("scroll", () => {
 // Button
 const BtnGoUp = document.querySelector(".button__GotoTop");
 document.addEventListener("scroll", () => {
-  if (window.scrollY >= navbarHeight) {
+  if (window.scrollY >= home_height / 2) {
     BtnGoUp.classList.remove("btn__hide");
   } else {
     BtnGoUp.classList.add("btn__hide");
