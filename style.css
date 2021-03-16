@@ -107,11 +107,19 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
   align-items: center;
   padding: 1rem;
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-blue);
+  padding: 0.5rem;
 }
 
 .navbar__logo {
@@ -150,18 +158,12 @@ p {
   display: none;
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: transparent;
-}
-
 /* Home */
 #home {
   background: url("imgs/background_img_1.jpg") center/cover no-repeat;
   padding: 2.5rem;
   text-align: center;
+  padding-top: 7rem;
 }
 
 .home__avatar {

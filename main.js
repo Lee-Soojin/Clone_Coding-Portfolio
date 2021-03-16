@@ -1,14 +1,13 @@
 "use strict";
 
-window.addEventListener("scroll", Sticky);
-
+// Make navbar transparent when it is on the top
 const navbar = document.getElementById("navbar");
-const sticky = navbar.offsetTop;
+const navbarHeight = navbar.getBoundingClientRect().height;
 
-function Sticky() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
+document.addEventListener("scroll", () => {
+  if (window.scrollY >= navbarHeight) {
+    navbar.classList.add("navbar--dark");
   } else {
-    navbar.classList.remove("sticky");
+    navbar.classList.remove("navbar--dark");
   }
-}
+});
