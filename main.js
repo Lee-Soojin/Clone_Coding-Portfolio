@@ -45,6 +45,20 @@ document.addEventListener("scroll", () => {
   }
 });
 
+// Button
+const BtnGoUp = document.querySelector(".button__GotoTop");
+document.addEventListener("scroll", () => {
+  if (window.scrollY >= navbarHeight) {
+    BtnGoUp.classList.remove("btn__hide");
+  } else {
+    BtnGoUp.classList.add("btn__hide");
+  }
+});
+BtnGoUp.addEventListener("click", () => {
+  scrollIntoView("#home");
+});
+
+// scrollIntoView Function
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });

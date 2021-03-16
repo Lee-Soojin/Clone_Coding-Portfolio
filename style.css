@@ -487,6 +487,22 @@ p {
   color: var(--color-yellow);
 }
 
+/* Button Go to top */
+
+.button__GotoTop {
+  position: fixed;
+  display: flex;
+  font-size: 3rem;
+  color: var(--color-black);
+  z-index: 100;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.btn__hide {
+  display: none;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
