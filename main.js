@@ -31,6 +31,21 @@ BtnContact.addEventListener("click", (event) => {
   scrollIntoView(contact_link);
 });
 
+// When scroll down Home section need to be transparent
+
+const home = document.querySelector("#home"),
+  home_height = home.getBoundingClientRect().height;
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY >= home_height / 2) {
+    home.style.opacity = 0.5;
+  } else if (window.scrollY >= home_height) {
+    home.style.opacity = 0.3;
+  } else {
+    home.style.opacity = 1;
+  }
+});
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });

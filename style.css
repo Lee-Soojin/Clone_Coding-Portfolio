@@ -165,6 +165,7 @@ p {
   padding: 2.5rem;
   text-align: center;
   padding-top: 7rem;
+  transition: all var(--animation-duration) linear;
 }
 
 .home__avatar {
