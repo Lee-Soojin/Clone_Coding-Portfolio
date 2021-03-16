@@ -1,13 +1,12 @@
 "use strict";
 
-window.onscroll = () => {
-  Sticky();
-};
+window.addEventListener("scroll", Sticky);
 
 const navbar = document.getElementById("navbar");
+const sticky = navbar.offsetTop;
 
 function Sticky() {
-  if (window.pageYOffset >= 69) {
+  if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");

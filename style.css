@@ -107,7 +107,6 @@ p {
 
 /* Navbar */
 #navbar {
-  position: sticky;
   display: flex;
   justify-content: space-between;
   background-color: var(--color-blue);
@@ -151,14 +150,11 @@ p {
   display: none;
 }
 
-.nav-transparent {
-  background-color: transparent;
-}
-
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
+  background-color: transparent;
 }
 
 /* Home */
