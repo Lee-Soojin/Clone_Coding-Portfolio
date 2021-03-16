@@ -19,13 +19,19 @@ document.addEventListener("scroll", () => {
 navbar.addEventListener("click", (event) => {
   const target = event.target;
   const link = target.dataset.link;
-  const elem = document.querySelector(link);
-  elem.scrollIntoView({ behavior: "smooth" });
+  if (link === null) {
+    return;
+  }
+  scrollIntoView(link);
 });
 
 BtnContact.addEventListener("click", (event) => {
   const btntarget = event.target;
   const contact_link = btntarget.dataset.link;
-  const contact_elem = document.querySelector(contact_link);
-  contact_elem.scrollIntoView({ behavior: "smooth" });
+  scrollIntoView(contact_link);
 });
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
