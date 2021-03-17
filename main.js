@@ -22,13 +22,13 @@ navbar.addEventListener("click", (event) => {
   if (link === null) {
     return;
   }
-  scrollIntoView(link);
+  scrollInto(link);
 });
 
 BtnContact.addEventListener("click", (event) => {
   const btntarget = event.target;
   const contact_link = btntarget.dataset.link;
-  scrollIntoView(contact_link);
+  scrollInto(contact_link);
 });
 
 // When scroll down Home section need to be transparent
@@ -55,11 +55,38 @@ document.addEventListener("scroll", () => {
   }
 });
 BtnGoUp.addEventListener("click", () => {
-  scrollIntoView("#home");
+  scrollInto("#home");
 });
 
 // scrollIntoView Function
-function scrollIntoView(selector) {
+function scrollInto(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+// Work section Filtering button event
+
+const projectsContainer = document.querySelector(".work__projects"),
+  category = document.querySelector(".work__categories"),
+  project = document.querySelectorAll(".project");
+
+category.addEventListener("click", (event) => {
+  const work__target = event.target;
+  const filter =
+    work__target.dataset.filter || work__target.parentNode.dataset.filter;
+  if (filter === null) {
+    return;
+  }
+
+  projectsContainer.classList.add("animation-out");
+  setTimeout(() => {
+    project.forEach((work) => {
+      if (filter === "*" || filter === work.dataset.id) {
+        work.classList.remove("hide");
+      } else {
+        work.classList.add("hide");
+      }
+    });
+    projectsContainer.classList.remove("animation-out");
+  }, 300);
+});

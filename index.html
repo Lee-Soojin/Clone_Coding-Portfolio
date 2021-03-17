@@ -181,13 +181,13 @@
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-          <button class="category__btn active">
+          <button class="category__btn active" data-filter="*">
             All <span class="category__count">8</span></button
-          ><button class="category__btn">
+          ><button class="category__btn" data-filter="front-end">
             Front-end <span class="category__count">5</span></button
-          ><button class="category__btn">
+          ><button class="category__btn" data-filter="application">
             Application <span class="category__count">3</span></button
-          ><button class="category__btn">
+          ><button class="category__btn" data-filter="others">
             Others <span class="category__count">3</span>
           </button>
         </div>
@@ -195,14 +195,11 @@
         <div class="work__projects">
           <a
             href="https://github.com/Lee-Soojin"
-            class="project"
+            class="project 1"
             target="blank"
+            data-id="front-end"
           >
-            <img
-              src="imgs/macbook_carrot_game.png"
-              class="project__img"
-              alt="Carrot_game"
-            />
+            <img src="imgs/1.png" class="project__img" alt="Carrot_game" />
             <div class="projects__description">
               <h3>Github Site</h3>
               <span>Carrot Game with HTML, CSS, Javascript</span>
@@ -210,14 +207,11 @@
           </a>
           <a
             href="https://github.com/Lee-Soojin"
-            class="project"
+            class="project 2"
             target="blank"
+            data-id="application"
           >
-            <img
-              class="project__img"
-              src="imgs/projects1_navbar_responsive.jpg"
-              alt="Responsiv_navbar"
-            />
+            <img class="project__img" src="imgs/2.jpg" alt="Responsiv_navbar" />
             <div class="projects__description">
               <h3>Github Site</h3>
               <span>Resposive Navbar with HTML, CSS, Javascript</span>
@@ -225,14 +219,11 @@
           </a>
           <a
             href="https://github.com/Lee-Soojin"
-            class="project"
+            class="project 3"
             target="blank"
+            data-id="front-end"
           >
-            <img
-              src="imgs/Shopping_List.jpg"
-              class="project__img"
-              alt="Shopping_List"
-            />
+            <img src="imgs/3.jpg" class="project__img" alt="Shopping_List" />
             <div class="projects__description">
               <h3>Github Site</h3>
               <span>Shopping list with HTML, CSS, Javascript</span>
@@ -240,14 +231,11 @@
           </a>
           <a
             href="https://github.com/Lee-Soojin"
-            class="project"
+            class="project 4"
             target="blank"
+            data-id="application"
           >
-            <img
-              src="imgs/toDolist.jpg"
-              class="project__img"
-              alt="To do list"
-            />
+            <img src="imgs/4.jpg" class="project__img" alt="To do list" />
             <div class="projects__description">
               <h3>Github Site</h3>
               <span>To-do list with HTML, CSS, Javascript</span>
@@ -255,11 +243,12 @@
           </a>
           <a
             href="https://github.com/Lee-Soojin"
-            class="project"
+            class="project 5"
             target="blank"
+            data-id="front-end"
           >
             <img
-              src="imgs/Mini_Shopping_Mall.jpg"
+              src="imgs/5.jpg"
               class="project__img"
               alt="Mini shopping mall"
             />
