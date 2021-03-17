@@ -138,16 +138,13 @@ p {
   margin: 0 0.25rem;
   color: var(--color-white);
   cursor: pointer;
+  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
-}
-
 .navbar__menu__item:hover {
+  border-color: var(--color-white);
   background-color: var(--color-dark-blue);
-  border-radius: 0.25rem;
 }
 
 .navbar__toggle-btn {
@@ -329,13 +326,13 @@ p {
   padding: 0.5rem 3rem;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-light-pink);
   color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
