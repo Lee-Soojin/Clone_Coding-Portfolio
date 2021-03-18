@@ -15,20 +15,27 @@ document.addEventListener("scroll", () => {
 });
 
 // when button clicked, scroll to each section
-
-navbar.addEventListener("click", (event) => {
+const NavbarMenu = document.querySelector(".navbar__menu");
+NavbarMenu.addEventListener("click", (event) => {
   const target = event.target;
   const link = target.dataset.link;
   if (link === null) {
     return;
   }
-  scrollInto(link);
+  NavbarMenu.classList.remove("open");
+  scrollIntoView(link);
+});
+
+// Navbar menu button
+const BtnMenu = document.querySelector(".navbar__toggle-btn");
+BtnMenu.addEventListener("click", () => {
+  NavbarMenu.classList.toggle("open");
 });
 
 BtnContact.addEventListener("click", (event) => {
   const btntarget = event.target;
   const contact_link = btntarget.dataset.link;
-  scrollInto(contact_link);
+  scrollIntoView(contact_link);
 });
 
 // When scroll down Home section need to be transparent
@@ -55,11 +62,11 @@ document.addEventListener("scroll", () => {
   }
 });
 BtnGoUp.addEventListener("click", () => {
-  scrollInto("#home");
+  scrollIntoView("#home");
 });
 
 // scrollIntoView Function
-function scrollInto(selector) {
+function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
